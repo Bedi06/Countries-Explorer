@@ -1,4 +1,26 @@
+.header-container{
+    padding: 2em;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+   margin:1em
+}
+.search-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em;
+}
+
+.search-input{
+    margin-right:4em;
+}
+h3{
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+.input{
+    margin-right: 1em;
 }

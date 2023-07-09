@@ -5,16 +5,16 @@ function RegionFilter ({onSelect}){
     }
 
     return(
-    <div>
+    
     <select name="region" defaultValue="" onChange={handleChange}>
-        <option disabled hidden>Filter by Region:</option>
+        <option value="" key="default"> Filter by Region: </option>
         <option key="africa">Africa</option>
         <option key="america">America</option>
         <option key="asia">Asia</option>
         <option key="europe">Europe</option>
         <option key="oceania">Oceania</option>
     </select>
-    </div>
+  
     )
 }
 
