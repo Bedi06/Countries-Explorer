@@ -8,9 +8,8 @@ const handleChange=(e)=>{
 return (
    
 <input
-className="input"
    type="text"
-   placeholder="Search here"
+   placeholder="Search for a country..."
    onChange={handleChange}
    value={searchInput} />
    

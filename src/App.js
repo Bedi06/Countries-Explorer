@@ -3,16 +3,26 @@ import React ,{useState, useEffect} from "react"
 import CountriesCards from './CoutriesCards';
 import data from "./data.json"
 import RegionFilter from './RegionFilter';
+import Header from './Header';
 import SearchBar from './SearchBar';
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+
+library.add(fas);
+
 
 
 function App() {
   const [region,setRegion]=useState("");
-  console.log(region);
   const [searchInput,setSearchInput]=useState("")
   const[FilteredCountries,setFilteredCountries]=useState(data);
+  const [DarkMode, setDarkMode] = useState(false);
 
-  
+
+  const handleDarkMode = () => {
+    setDarkMode(previousState => !previousState);
+  };
   useEffect(()=>{
     let filtered = data;
 
@@ -29,15 +39,13 @@ function App() {
   },[region,searchInput]);
 
   return (
-    <div className="App">
-    <header className="header-container">
-      <h1>Where is the world?</h1>
-    </header>
+    <div className={`App ${DarkMode ? "dark" : ""}`}>
+    <Header DarkMode={DarkMode} handleDarkMode={handleDarkMode} />
     <div className="search-select">
-    <RegionFilter onSelect={(region)=>setRegion(region)}/>
     <SearchBar className="search-input" searchInput={searchInput} setSearchInput={setSearchInput}/>
+    <RegionFilter onSelect={(region)=>setRegion(region)}/>
     </div>
-    <CountriesCards allCountries={FilteredCountries}/>
+    <CountriesCards allCountries={FilteredCountries} DarkMode={DarkMode}/>
     </div>
   );
 }
