@@ -1,18 +1,17 @@
-function SearchBar({searchInput,setSearchInput}){
-
-const handleChange=(e)=>{
+function SearchBar({ searchInput, setSearchInput, DarkMode }) {
+  const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
-};
+  };
 
-return (
-   
-<input
-   type="text"
-   placeholder="Search for a country..."
-   onChange={handleChange}
-   value={searchInput} />
-   
-   );
-};
+  return (
+    <input
+      className={` ${DarkMode ? "dark" : ""}`}
+      type="text"
+      placeholder="Search for a country..."
+      onChange={handleChange}
+      value={searchInput}
+    />
+  );
+}
 export default SearchBar;
