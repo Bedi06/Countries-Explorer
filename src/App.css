@@ -1,8 +1,21 @@
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: #333333;
+}
+
+.dark body {
+  background-color: #202c37;
+  color: #ffffff;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2em;
-  margin: 4em;
+  gap: 0.5em;
+  margin: 2em;
+}
+.grid-container.dark {
+  background-color: #202c37;
+  color: #ffffff;
 }
 .search-select {
   display: flex;
@@ -34,7 +47,6 @@ body {
 
 .checkbox {
   opacity: 0;
-  position: absolute;
 }
 
 .checkbox-label {
@@ -134,7 +146,7 @@ select {
 
 .card {
   color: #333333;
-  width: 18rem;
+  width: 16rem;
   padding-left: 2rem;
 }
 
@@ -142,4 +154,40 @@ select {
   background-color: #476783;
   color: #ffffff;
   box-shadow: #333333;
+}
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .search-select {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .card,
+  .card.dark {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for iPad */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card,
+  .card.dark {
+    width: 85%;
+  }
 }

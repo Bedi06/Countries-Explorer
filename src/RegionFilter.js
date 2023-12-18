@@ -15,7 +15,7 @@ function RegionFilter({ onSelect, DarkMode }) {
         Filter by Region:{" "}
       </option>
       <option key="africa">Africa</option>
-      <option key="america">America</option>
+      <option key="americas">Americas</option>
       <option key="asia">Asia</option>
       <option key="europe">Europe</option>
       <option key="oceania">Oceania</option>
