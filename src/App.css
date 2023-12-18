@@ -138,6 +138,7 @@ select {
   border-radius: 3px;
   padding: 8px;
   border: 1px;
+  margin-right: 4.5rem;
 }
 .select.dark {
   color: #fff;
@@ -167,11 +168,12 @@ select {
   }
 
   input {
-    width: 100%;
+    width: 80%;
   }
 
   select {
-    width: 100%;
+    width: 50%;
+    margin: 0;
   }
 
   .card,
