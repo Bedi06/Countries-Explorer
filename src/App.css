@@ -134,8 +134,8 @@ input {
 }
 
 select {
-  border: 1px solid rgb(105, 105, 105);
-  border-radius: 3px;
+  border: 1px solid rgb(35, 31, 31);
+  border-radius: 5px;
   padding: 8px;
   border: 1px;
   margin-right: 4.5rem;
@@ -148,7 +148,7 @@ select {
 .card {
   color: #333333;
   width: 16rem;
-  padding-left: 2rem;
+  height: 18rem;
 }
 
 .card.dark {
@@ -156,9 +156,29 @@ select {
   color: #ffffff;
   box-shadow: #333333;
 }
-@media (max-width: 767px) {
+
+@media (max-width: 600px) {
   .grid-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card,
+  .card.dark {
+    width: 60%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .search-select {
@@ -176,20 +196,19 @@ select {
     margin: 0;
   }
 
-  .card,
-  .card.dark {
-    width: 100%;
-  }
-}
-
-/* Responsive styles for iPad */
-@media (min-width: 768px) and (max-width: 1200px) {
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .card,
+  /* .card,
   .card.dark {
     width: 85%;
+    height: 85%;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

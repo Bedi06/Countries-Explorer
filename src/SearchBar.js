@@ -1,6 +1,7 @@
+import React from "react";
+
 function SearchBar({ searchInput, setSearchInput, DarkMode }) {
   const handleChange = (e) => {
-    e.preventDefault();
     setSearchInput(e.target.value);
   };
 
@@ -14,4 +15,5 @@ function SearchBar({ searchInput, setSearchInput, DarkMode }) {
     />
   );
 }
+
 export default SearchBar;

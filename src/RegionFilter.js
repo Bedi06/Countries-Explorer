@@ -1,3 +1,5 @@
+import React from "react";
+
 function RegionFilter({ onSelect, DarkMode }) {
   function handleChange(event) {
     onSelect(event.target.value);
@@ -11,14 +13,23 @@ function RegionFilter({ onSelect, DarkMode }) {
       onChange={handleChange}
     >
       <option value="" key="default">
-        {" "}
-        Filter by Region:{" "}
+        Filter by Region:
       </option>
-      <option key="africa">Africa</option>
-      <option key="americas">Americas</option>
-      <option key="asia">Asia</option>
-      <option key="europe">Europe</option>
-      <option key="oceania">Oceania</option>
+      <option value="Africa" key="africa">
+        Africa
+      </option>
+      <option value="Americas" key="americas">
+        Americas
+      </option>
+      <option value="Asia" key="asia">
+        Asia
+      </option>
+      <option value="Europe" key="europe">
+        Europe
+      </option>
+      <option value="Oceania" key="oceania">
+        Oceania
+      </option>
     </select>
   );
 }
