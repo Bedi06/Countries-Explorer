@@ -12,6 +12,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0.5em;
   margin: 2em;
+  justify-items: center;
 }
 .grid-container.dark {
   background-color: #202c37;
@@ -55,7 +56,7 @@ body {
   height: 26px;
   border-radius: 50px;
   position: relative;
-  padding: 5px;
+  padding: 6px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -75,7 +76,6 @@ body {
   width: 22px;
   height: 22px;
   position: absolute;
-  left: 2px;
   top: 2px;
   border-radius: 50%;
   transition: transform 0.2s linear;
@@ -86,12 +86,16 @@ body {
 }
 
 .header-container {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 1rem 2rem;
   background-color: #ffffff;
   color: #333333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
   z-index: 999;
 }
 
@@ -100,11 +104,7 @@ body {
   color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-.header-elem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .header-h1 {
   margin: 0;
 }
@@ -123,8 +123,8 @@ input {
   background-color: hsl(0, 0%, 100%);
   border: 1px solid grey;
   border-radius: 3px;
-  width: 300px;
   padding: 8px;
+  width: 16rem;
 }
 .input.dark {
   background-color: #476783;
@@ -136,7 +136,6 @@ select {
   border-radius: 5px;
   padding: 8px;
   border: 1px;
-  margin-right: 4.5rem;
 }
 .select.dark {
   color: #fff;
@@ -169,6 +168,15 @@ select {
     align-items: center;
     justify-content: center;
   }
+  .search-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .select {
+    margin-right: 0;
+  }
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .grid-container {
@@ -181,29 +189,17 @@ select {
   }
 
   .search-select {
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+
     gap: 0.5em;
-  }
-
-  input {
-    width: 80%;
-  }
-
-  select {
-    width: 50%;
-    margin: 0;
   }
 
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
-  /* .card,
-  .card.dark {
-    width: 85%;
-    height: 85%;
-  } */
 }
 
 @media (min-width: 1200px) {
