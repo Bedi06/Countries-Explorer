@@ -119,8 +119,6 @@ body {
   color: inherit;
 }
 
-/* Styling for search input */
-
 input {
   background-color: hsl(0, 0%, 100%);
   border: 1px solid grey;
@@ -149,12 +147,13 @@ select {
   color: #333333;
   width: 16rem;
   height: 18rem;
+  background-color: #ffffff;
 }
 
 .card.dark {
   background-color: #476783;
   color: #ffffff;
-  box-shadow: #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 600px) {

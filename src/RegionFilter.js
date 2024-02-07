@@ -1,13 +1,13 @@
 import React from "react";
 
-function RegionFilter({ onSelect, DarkMode }) {
+function RegionFilter({ onSelect, darkMode }) {
   function handleChange(event) {
     onSelect(event.target.value);
   }
 
   return (
     <select
-      className={` ${DarkMode ? "dark" : ""}`}
+      className={` select ${darkMode ? "dark" : ""}`}
       name="region"
       defaultValue=""
       onChange={handleChange}

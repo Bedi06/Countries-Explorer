@@ -1,6 +1,6 @@
 import React from "react";
 
-function CountriesCards({ allCountries, DarkMode }) {
+function CountriesCards({ allCountries, darkMode }) {
   const sortedCountries = allCountries.sort((a, b) => {
     const nameA = a.name.common.toLowerCase();
     const nameB = b.name.common.toLowerCase();
@@ -10,15 +10,15 @@ function CountriesCards({ allCountries, DarkMode }) {
   });
 
   return (
-    <div className={`grid-container ${DarkMode ? "dark" : ""}`}>
+    <div className={`grid-container ${darkMode ? "dark" : ""}`}>
       {sortedCountries.map((country, index) => (
         <div
           key={index}
-          className={`card w-full shadow p-3 mb-5 bg-white rounded ${
-            DarkMode ? "dark" : ""
+          className={`card w-full shadow p-3 mb-5 rounded ${
+            darkMode ? "dark" : ""
           }`}
           style={{
-            marginBottom: DarkMode ? "2rem" : "2rem",
+            marginBottom: darkMode ? "2rem" : "2rem",
             height: "350px",
           }}
         >

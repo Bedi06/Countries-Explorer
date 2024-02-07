@@ -1,13 +1,13 @@
 import React from "react";
 
-function SearchBar({ searchInput, setSearchInput, DarkMode }) {
+function SearchBar({ searchInput, setSearchInput, darkMode }) {
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
 
   return (
     <input
-      className={` ${DarkMode ? "dark" : ""}`}
+      className={`input ${darkMode ? "dark" : ""}`}
       type="text"
       placeholder="Search for a country..."
       onChange={handleChange}
